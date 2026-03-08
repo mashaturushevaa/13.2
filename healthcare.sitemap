@@ -1,0 +1,13 @@
+sitemap healthcare label="Healthcare Monitoring System" {
+    Frame label="Вітальні показники пацієнта" {
+        Text item=Patient_HeartRate valuecolor=[>100="red", >80="orange", <=80="green"]
+        Text item=Patient_SpO2 valuecolor=[<90="red", <94="orange", >=94="green"]
+        Text item=Patient_Temp
+    }
+    
+    Frame label="Аналітика та CEP Статус" {
+        Text item=Patient_Status labelcolor=[=="Стабільний"="green", !="Стабільний"="red"]
+        Text item=Alert_Priority
+        Switch item=Emergency_Alarm mappings=[OFF="Скинути"]
+    }
+}

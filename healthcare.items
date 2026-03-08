@@ -1,0 +1,9 @@
+// Показники пацієнта
+Number Patient_HeartRate "Пульс [%d BPM]" <pulse>
+Number Patient_SpO2 "Кисень (SpO2) [%d %%]" <flow>
+Number Patient_Temp "Температура тіла [%.1f °C]" <temperature>
+
+// Складні події (Complex Events)
+String Patient_Status "Статус пацієнта [%s]" <presence>
+String Alert_Priority "Пріоритет тривоги [%s]" <pantry>
+Switch Emergency_Alarm "КРИТИЧНИЙ СТАН" <alarm>
