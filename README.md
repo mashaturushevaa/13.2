@@ -1,3 +1,10 @@
+ graph TD
+    A[Heart Rate Stream] --> D{CEP Engine}
+    B[SpO2 Stream] --> D
+    C[Body Temp Stream] --> D
+    D -->|High Correlation| E[Critical Alert: High Priority]
+    D -->|Normal Values| F[Status: Stable]
+    E --> G[Nurse Notification]
 # Практична робота 13.2: Real-time Healthcare Stream Processing
 
 **Виконала:** Марія Турушева  
@@ -18,10 +25,3 @@
 
 ## 4. Результати
 Система забезпечує низьку затримку (latency) при обробці подій та дозволяє автоматизувати роботу медичного персоналу завдяки чіткій пріоритезації критичних станів.
- graph TD
-    A[Heart Rate Stream] --> D{CEP Engine}
-    B[SpO2 Stream] --> D
-    C[Body Temp Stream] --> D
-    D -->|High Correlation| E[Critical Alert: High Priority]
-    D -->|Normal Values| F[Status: Stable]
-    E --> G[Nurse Notification]
